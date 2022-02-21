@@ -5,11 +5,7 @@ var startScreen = false;
 var pipes = new Array();
 var score = 0;
 let backgroundImage;
-/*
-function preload() {
-	backgroundImage = loadImage('assets/backround1.png');
-}
-*/
+
 function setup() {
 	createCanvas(600, 600);
 	bird = new Bird();
@@ -20,20 +16,14 @@ function setup() {
 }
 
 function draw() {
-
 	background(51);
-	//image(backgroundImage, 0, 0);
-
 	if (startScreen) {
-
 		if (frameCount % 6 == 0 && force > 0) {
 			force -= 3;
 		}
-
+		
 		if (animateSprites) {
-
 				for (var i in pipes) {
-
 				pipes[i].update();
 			}
 		}
@@ -43,7 +33,6 @@ function draw() {
 		}
 
 		bird.update();
-
 		checkScore();
 		checkCollision();
 
@@ -56,8 +45,10 @@ function draw() {
 	textAlign(CENTER);
 	text("Press any button to jump,\nand survive as long as possible!", width / 2, 3*height / 4);
 }
+	
 bird.show();
 drawScoreboard();
+	
 }
 
 function keyPressed() {
@@ -72,7 +63,6 @@ function keyPressed() {
 			force = 17;
 		}
 	}
-
 }
 
 function mousePressed() {
@@ -124,5 +114,4 @@ function drawScoreboard() {
 	}
 	textAlign(CENTER);
 	text(str(score), width / 2, 68);
-	//text(str(score), width / 2 - 30, 30, 65, 45);
 }
