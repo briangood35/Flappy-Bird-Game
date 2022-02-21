@@ -3,6 +3,6 @@ REQUIRES
 --------------------
 None
 
-HOW TO USE
----------------------
-Open **index.html** with a browser or run it on [my website](https://www.briangood.dev/)
+How to play
+-----------------
+Open **index.html** in a browser or try it out on [my website](https://www.briangood.dev/)
